@@ -15,26 +15,6 @@ app.get('/api/assignments/debug', (req, res) => {
     res.json(assignments);
 });
 
-app.get('/api/frq', (req, res) => {
-
-    const responses = [
-
-`The program uses a list to store multiple club names and their information. The list allows the algorithm to efficiently search through data using iteration and selection.`,
-
-`The list named "clubs" stores multiple related values in one structure. A loop iterates through the list and compares each item to the user input.`,
-
-`The program uses a list so multiple club values can be managed without creating separate variables. The algorithm loops through the list and outputs matching information.`
-
-    ];
-
-    const pick = responses[Math.floor(Math.random() * responses.length)];
-
-    res.json({
-        answer: pick
-    });
-
-});
-
-app.listen(8085, () => {
-    console.log('Backend running on http://localhost:8085');
+app.listen(8585, () => {
+    console.log('Backend running on http://localhost:8585');
 });
